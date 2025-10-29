@@ -1,2 +1,80 @@
-# Simple-Counter-App
-This project is a minimalist web-based counter application built using HTML and CSS. It features a clean interface with two transparent circular buttons — plus (+) and minus (−). The central display shows the current count, which updates dynamically as users interact with the buttons.
+<html>
+<head>
+  <title>Simple Counter</title>
+  <style>
+    body {
+      background-image:linear-gradient(to bottom, yellow,red);
+      font-family: Algerian;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #count {
+      font-size: 300px;
+      margin: 20px;
+    }
+    h1{
+      font-size:50px;
+      font-family:Comic Sans;
+	}
+
+  .circle-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 60px;
+      border: 2px solid #333;
+      border-radius: 50%;
+      background: transparent;
+      font-size: 30px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+  .circle-btn:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+  .left {
+      margin-top:50px;
+      left: 50px;
+    }
+
+  .right {
+      margin-top:50px;
+      right: 50px;
+    }
+    .reset {
+      margin-top:250px;
+      text-align:center;
+      width:100px;
+      border-radius:20px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1> Counter App </h1>
+  <div class="container">
+    <button class="circle-btn left" onclick="changeCount(-1)">−</button>
+    <div id="count">0</div>
+    <button class="circle-btn right" onclick="changeCount(1)">+</button>
+    <button class="circle-btn reset" onclick="resetCount()">Reset</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const countDisplay = document.getElementById('count');
+
+    function changeCount(value) {
+      count += value;
+      countDisplay.textContent = count;
+    }
+
+    function resetCount() {
+      count = 0;
+      countDisplay.textContent = count;
+    }
+  </script>
+</body>
+</html>
