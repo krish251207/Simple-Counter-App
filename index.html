@@ -3,21 +3,25 @@
   <title>Simple Counter</title>
   <style>
     body {
-      background-image:linear-gradient(to bottom, yellow,red);
+      background-image:url("spacebg.jpg");
       font-family: Algerian;
+      color:#fff;
       text-align: center;
       margin-top: 50px;
     }
     #count {
       font-size: 300px;
       margin: 20px;
+      margin-bottom:-10px;
     }
     h1{
       font-size:50px;
       font-family:Comic Sans;
+      margin-bottom:-10px;
+  
 	}
 
-  .circle-btn {
+     .circle-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -25,30 +29,42 @@
       height: 60px;
       border: 2px solid #333;
       border-radius: 50%;
+      border-color:#fff;
       background: transparent;
       font-size: 30px;
       cursor: pointer;
       transition: background 0.2s;
     }
 
-  .circle-btn:hover {
+    .circle-btn:hover {
       background: rgba(0, 0, 0, 0.05);
     }
 
-  .left {
+    .left {
       margin-top:50px;
       left: 50px;
+      color:#fff;
     }
 
-  .right {
+    .right {
       margin-top:50px;
       right: 50px;
+      color:#fff;
     }
+
     .reset {
-      margin-top:250px;
-      text-align:center;
+      margin-top:0px;
+      width: 60px;
+      height: 60px;
+      border: 2px solid #333;
+      border-radius: 50%;
+      border-color:#fff;
+      background: transparent;
+      font-size: 30px;
+      cursor: pointer;
       width:100px;
       border-radius:20px;
+      color:#fff;
     }
 
   </style>
@@ -59,7 +75,7 @@
     <button class="circle-btn left" onclick="changeCount(-1)">−</button>
     <div id="count">0</div>
     <button class="circle-btn right" onclick="changeCount(1)">+</button>
-    <button class="circle-btn reset" onclick="resetCount()">Reset</button>
+    <button class="reset" onclick="resetCount()">Reset</button>
   </div>
 
   <script>
